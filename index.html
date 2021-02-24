@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TASKS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img class="logo" src="img/Logo.png" alt="logo">
+    <span class="logo-text">Toboolist</span>
+  </header>
+  <main>
+    <div class="container">
+      <div class="top"> <!-- PARTE SUPERIORE DEL CONTAINER -->
+        <button class="btn filled">
+          <a href="#">Add Task</a>
+        </button> <!-- uso il tag "a" cosi che quando    passo il muose cambia il cursore -->
+        <button class="btn empty">
+          <a href="#">Add Task</a>
+        </button>
+      </div>
+      
+      <div class="tasks"> <!-- PARTE CENTRALE CON I TASK come LISTE ANNIDATE-->
+        <ul>
+          <li><h3> New Task</h3></li>
+              <ul>
+                <li>
+                  <span class="circle checked"></span>
+                  Quarterly Newsletter
+                  <span class="tag tag-editor">Editorial</span> <!-- creo box generico in tag e poi in tag-editor metto il colore specifico -->
+                </li>
+                <li>
+                  <span class="circle checked"></span>
+                  Quarterly Newsletter
+                </li>
+              </ul>
+          <li><h3> Today</h3></li>
+          <li><h3> Upcoming</h3></li>
+        </ul>
+      </div>
+      
+    </div>
+  </main>
+</body>
+</html>

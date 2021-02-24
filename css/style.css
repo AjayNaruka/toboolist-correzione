@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body{
+  background-color: #F6F8F9;
+  font-family: Arial, Helvetica, sans-serif; /* meglio su body cosi avviene ereditarietà // metterlo a * ne fa una sorta di copia su ciascun elemento */
+}
+header{
+  height: 80px;
+  padding: 10px 20px; /* per dare gli spazi attorno al logo visto che padding
+                          lavora sul contenuto*/
+  background-color: white;
+  
+}
+.logo{
+  height: 100%; /* cosi occupa tutto l'header, ma il padding dell header fa si
+                  che non si tocchi ai lati */
+  vertical-align: middle;
+}
+
+.logo-text{
+  font-size: 40px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.container{
+  width: 70%;
+  margin: 40px auto;
+  padding: 10px 40px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn{ /* caratteristiche generiche */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.btn a{
+  text-decoration: none;
+}
+
+.filled{
+  border: 1px solid #47adf1; /* cosi il primo tasto non perde quel 1 px rispetto all'altro tasto che ha un bordo di 1px */
+  background-color: #47ADF1;
+}
+.filled a{
+  color: white;
+}
+.empty{
+  background-color: white;
+  border: 1px solid gray;
+}
+.empty a{
+  color: gray;
+}
+.container .top{
+  border-bottom: 1px solid #F6F8F9;
+}
+.container .tasks{
+  padding: 20px 0px;
+}
+
+li{
+  list-style: none; /* toglie i puntini elenco */
+  padding:5px;
+}
+
+li h3::before{
+  content: '\25BE';  /* mette prima di tutti gli h3 il triangolino */
+}
+
+li .circle::before{ /* in comune sia a check e cross */
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  line-height: 15px; /* uguale a height e width e poi 50% per il cerchio */
+  font-size: 10px;
+  text-align: center;
+}
+
+li .circle.checked::before{
+  content: '\2713';
+  border: 1px solid aquamarine;
+  color: #2cc6ab;
+}
